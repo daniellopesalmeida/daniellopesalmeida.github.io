@@ -611,6 +611,16 @@ body {
   box-shadow: 0 8px 18px rgba(15, 23, 42, 0.14);
 }
 
+.back-projects-link .footer-icon {
+  transition: transform 0.2s ease, filter 0.2s ease;
+  filter: drop-shadow(0 0 0 rgba(247, 123, 249, 0));
+}
+
+.back-projects-link:hover .footer-icon {
+  transform: translateX(-4px) rotate(-10deg);
+  filter: drop-shadow(0 0 8px rgba(247, 123, 249, 0.35));
+}
+
 .project-link-label {
   font-size: 0.95rem;
   font-weight: 700;
