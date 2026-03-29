@@ -154,6 +154,12 @@ body {
   min-height: 160px;
 }
 
+.back-to-top-section {
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0 0;
+}
+
 .contact-section-content {
   display: flex;
   flex-direction: column;
@@ -325,6 +331,7 @@ body {
       display: flex;
       flex-direction: column;
       gap: 24px;
+      min-height: 430px;
       padding: 1rem;
       background: linear-gradient(145deg, rgba(45, 45, 66, 0.92), rgba(37, 37, 55, 0.92));
       border: 1px solid var(--border-color);
@@ -333,6 +340,7 @@ body {
       transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
       text-decoration: none;
       color: inherit;
+      align-self: stretch;
     }
 
     .project-card:hover {
@@ -425,6 +433,12 @@ body {
 }
 
 #project-details {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+#project-preface {
   display: flex;
   flex-direction: column;
   gap: 16px;

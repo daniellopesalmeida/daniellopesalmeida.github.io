@@ -73,6 +73,7 @@ body {
 .content-subsection > .subheader-text::after,
 #contact-section > .subheader-text::after,
 #project-details > .subheader-text::after,
+#project-preface > .subheader-text::after,
 #project-code > .subheader-text::after,
 #project-gallery > .subheader-text::after,
 #project-links > .subheader-text::after,
@@ -103,13 +104,7 @@ body {
 }
 
 .project-card-text {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 4;
-  line-clamp: 4;
-  -webkit-box-orient: vertical;
-  
+  display: block;
 }
 
 .project-title {

@@ -257,6 +257,15 @@ a.button:hover .right-arrow-icon {
   filter: drop-shadow(0 0 8px rgba(255, 184, 107, 0.35));
 }
 
+.back-to-top-icon {
+  transform: rotate(90deg);
+  transform-origin: center;
+}
+
+a.button:hover .back-to-top-icon {
+  transform: rotate(90deg) translateX(-3px) scale(1.08);
+}
+
 .nav-index .button.active {
   background: linear-gradient(135deg, rgba(255, 184, 107, 0.22), rgba(247, 123, 249, 0.16));
   border-color: var(--primary-color);
