@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+    <link rel="icon" href="./assets/icons/avatar.svg" />
+		<title>Daniel Almeida</title>
+    <meta name="description" content="Portfolio">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+		<link rel="stylesheet" href="./css/layout.css">
+    <link rel="stylesheet" href="./css/typography.css">
+    <link rel="stylesheet" href="./css/utilities.css">
+
+		<script defer src="./js/script.js"></script>
+	</head>
+	<body>
+    <div class="site-header">
+      <div class="nav-title">Daniel Almeida</div>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    </div>
+
+    <div class="navbar" id="site-nav">
+      <div class="nav-primary">
+        <div class="nav-index">
+          <a class="button" href="#about-section">About Me</a>
+          <a class="button" href="#my-work-section">Games</a>
+          <a class="button" href="#other-projects-section">Other Projects</a>
+          <a class="button" href="#skills-section">Skills</a>
+          <a class="button" href="#contact-section">Contact Me</a>
+        </div>
+      </div>
+    </div>
+
+    <div id="main-content">
+      <div id="portfolio-header">
+        <div id="portfolio-header-image-container">
+          <img src="./assets/icons/avatar.svg" class="portfolio-header-image">
+          <a class="no-underline" target="_blank" >
+            
+          </a>
+        </div>
+        <div id="portfolio-header-text-container">
+            <div class="header-text">
+              <span class="main-title">Hey, I'm <span class="hero-name">Daniel Almeida</span>.</span>
+              <div class="body-text">I’m a Game Developer.</div>
+            </div>
+            <a class="button" id="my-work-link" href="./assets/documents/CV_Daniel_Almeida.pdf" target="_blank" rel="noopener noreferrer">
+              <span class="button-text">Open My CV</span> 
+              <img src="./assets/icons/curriculum-vitae-resume-svgrepo-com.svg" class="right-arrow-icon" alt="CV icon" />
+            </a>
+        </div>
+      </div>
+
+      <div id="about-section">
+        <span class="subheader-text">About Me</span>
+        <div class="about-section-content">
+          <div class="body-text">Hello my name is Daniel, im currenty finishing my degree in Game Development. I always had an interest in games since i was younger, they stayed with me throughout my life. So i decided that games should stop being a hobby and start being my professional life!</div>
+          <div class="body-text">Currently, I am focusing on further developing my skills in C++, C# and unity. I am now working on learning more about Vulkan, so i decided to create a game engine based on Vulkan. At the same time, i am continuing my research in underwater scenes, lighting and how they are implemented in games.</div>
+          <div class="body-text">On my free time, beside working on my projects and playing video games, i enjoy sports, specially swimming and surfing.  </div>
+        </div>
+      </div>
+
+      <div id="my-work-section">
+        <span class="subheader-text">My Games</span>
+
+        <div class="projects-container">
+          <a class="project-card project-card-link" href="./project/wok-this-way.html" data-tags="C#, Unity">
+            <img src="./assets/images/wokthisway1.png" class="project-image" alt="Wok This Way">
+            <div class="project-card-text-container">
+              <div class="subheader-text project-title">Wok This Way</div>
+              <div class="body-text project-card-text">A fun and engaging game where players navigate through a world of culinary challenges. Made for an arcade machine</div>
+            </div>
+          </a>
+          <a class="project-card project-card-link" href="./project/bumpurr-cars.html" data-tags="C++, Unreal, Four-Player">
+            <img src="./assets/images/bumpurrCarsLogo2.png" class="project-image" alt="Bumpurr Cars">
+            <div class="project-card-text-container">
+              <div class="subheader-text project-title">Bumpurr Cars</div>
+              <div class="body-text project-card-text">A fast-paced bumper car game where 4 players compete in high-speed arena. Built with Unreal Engine and C++.</div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div id="other-projects-section">
+        <div class="content-subsection">
+          <span class="subheader-text">Other Projects</span>
+
+          <div class="projects-container">
+            <a class="project-card project-card-link" href="./project/graduation-work-research.html" data-tags="Research, Underwater Lighting, Unity, C#">
+              <img src="./assets/images/GraduationWork/GWimage.png" class="project-image" alt="Graduation Work Research">
+              <div class="project-card-text-container">
+                <div class="subheader-text project-title">Graduation Work Research</div>
+                <div class="body-text project-card-text">Research exploring how specific lighting parameters influence the perceived mood and realism of underwater scenes in real-time rendering.</div>
+              </div>
+            </a>
+            <a class="project-card project-card-link" href="./project/theta-star-research.html" data-tags="C++, AI, Pathfinding">
+              <img src="./assets/images/thetastar.png" class="project-image" alt="Theta* research project">
+              <div class="project-card-text-container">
+                <div class="subheader-text project-title">Theta* Research</div>
+                <div class="body-text project-card-text">Gameplay programming research focused on implementing and exploring Theta* pathfinding.</div>
+              </div>
+            </a>
+            <a class="project-card project-card-link" href="./project/geoa-mini-game.html" data-tags="C++, Geometric Algebra, Reflection">
+              <img src="./assets/images/geoa.png" class="project-image" alt="Projective geometric algebra mini game">
+              <div class="project-card-text-container">
+                <div class="subheader-text project-title">Geometric Algebra Mini Game</div>
+                <div class="body-text project-card-text">A small game built to showcase projective geometric algebra, including mechanics like collision and movement using reflection and translation.</div>
+              </div>
+            </a>
+            <a class="project-card project-card-link" href="./project/tron.html" data-tags="C++, Game Engine, Graphics">
+              <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300'%3E%3Crect fill='%23222' width='400' height='300'/%3E%3Ctext x='50%25' y='50%25' font-size='20' fill='%2388ff00' text-anchor='middle' dominant-baseline='middle' font-family='monospace'%3ETron Engine%3C/text%3E%3C/svg%3E" class="project-image" alt="Tron Game Engine">
+              <div class="project-card-text-container">
+                <div class="subheader-text project-title">Tron</div>
+                <div class="body-text project-card-text">A recreation of Tron arcade game (1982) using a custom C++ game engine.</div>
+              </div>
+            </a>
+            <a class="project-card project-card-link" href="./project/water-surface-unity.html" data-tags="Unity, C#, Water Shader, URP">
+              <img src="./assets/images/WaterShader/watterShaderImage.png" class="project-image" alt="Water Surface Shader">
+              <div class="project-card-text-container">
+                <div class="subheader-text project-title">Water Surface Shader</div>
+                <div class="body-text project-card-text">A water surface shader for Unity's URP featuring wave simulation using Gerstner waves.</div>
+              </div>
+            </a>
+            <a class="project-card project-card-link" href="./project/xv-engine.html" data-tags="C++, Graphics, Vulkan, Engine">
+              <img src="./assets/images/XVEngine/triangleVulkan.png" class="project-image" alt="XV Engine Vulkan Graphics">
+              <div class="project-card-text-container">
+                <div class="subheader-text project-title">XVEngine</div>
+                <div class="body-text project-card-text">A graphics-focused game engine built with Vulkan in C++.</div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="content-subsection skills-section" id="skills-section">
+          <div class="subheader-text">Skills</div>
+          <div class="skills-grid">
+            <div class="skill-card">
+              <div class="skill-icon">
+                <img src="./assets/icons/cpp-svgrepo-com.svg" class="skill-icon-image" alt="C++ logo" />
+              </div>
+              <div class="skill-label">C++</div>
+            </div>
+            <div class="skill-card">
+              <div class="skill-icon">
+                <img src="./assets/icons/csharp-svgrepo-com.svg" class="skill-icon-image" alt="C# logo" />
+              </div>
+              <div class="skill-label">C#</div>
+            </div>
+            <div class="skill-card">
+              <div class="skill-icon">
+                <img src="./assets/icons/unity-svgrepo-com.svg" class="skill-icon-image" alt="Unity logo" />
+              </div>
+              <div class="skill-label">Unity</div>
+            </div>
+            <div class="skill-card">
+              <div class="skill-icon">
+                <img src="./assets/icons/unreal-engine-svgrepo-com.svg" class="skill-icon-image" alt="Unreal Engine logo" />
+              </div>
+              <div class="skill-label">Unreal</div>
+            </div>
+            <div class="skill-card">
+              <div class="skill-icon">
+                <img src="./assets/icons/lua-svgrepo-com.svg" class="skill-icon-image" alt="Lua logo" />
+              </div>
+              <div class="skill-label">Lua</div>
+            </div>
+            <div class="skill-card">
+              <div class="skill-icon">
+                <img src="./assets/icons/html-5-svgrepo-com.svg" class="skill-icon-image" alt="HTML logo" />
+              </div>
+              <div class="skill-label">HTML</div>
+            </div>
+            <div class="skill-card">
+              <div class="skill-icon">
+                <img src="./assets/icons/cmake-svgrepo-com.svg" class="skill-icon-image" alt="CMake logo" />
+              </div>
+              <div class="skill-label">CMake</div>
+            </div>
+            <div class="skill-card">
+              <div class="skill-icon">
+                <img src="./assets/icons/github1.svg" class="skill-icon-image" alt="GitHub logo" />
+              </div>
+              <div class="skill-label">GitHub</div>
+            </div>
+            <div class="skill-card">
+              <div class="skill-icon">
+                <img src="./assets/icons/Logo-perforce-icon-reg.svg" class="skill-icon-image" alt="Perforce logo" />
+              </div>
+              <div class="skill-label">Perforce</div>
+            </div>
+            <div class="skill-card">
+              <div class="skill-icon">
+                <img src="./assets/icons/visual-studio-code-svgrepo-com.svg" class="skill-icon-image" alt="VS Code logo" />
+              </div>
+              <div class="skill-label">VS Code</div>
+            </div>
+            <div class="skill-card">
+              <div class="skill-icon">
+                <img src="./assets/icons/visual-studio-svgrepo-com.svg" class="skill-icon-image" alt="Visual Studio logo" />
+              </div>
+              <div class="skill-label">Visual Studio</div>
+            </div>
+            <div class="skill-card">
+              <div class="skill-icon">
+                <img src="./assets/icons/blender-svgrepo-com.svg" class="skill-icon-image" alt="Blender logo" />
+              </div>
+              <div class="skill-label">Blender</div>
+            </div>
+            <div class="skill-card">
+              <div class="skill-icon">
+                <img src="./assets/icons/adobe-photoshop-svgrepo-com.svg" class="skill-icon-image" alt="Photoshop logo" />
+              </div>
+              <div class="skill-label">Photoshop</div>
+            </div>
+            <div class="skill-card">
+              <div class="skill-icon">
+                <img src="./assets/icons/houdini_badge_flat.svg" class="skill-icon-image" alt="Houdini logo" />
+              </div>
+              <div class="skill-label">Houdini</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="contact-section">
+        <span class="subheader-text">Contact Me</span>
+        <div class="contact-section-content">
+          <div class="contact-intro">
+            <div class="body-text">Feel free to reach out to me if you have any questions!</div>
+          </div>
+          <div class="contact-links">
+            <a class="contact-card" target="_blank" href="https://linkedin.com/in/daniel-almeida-in">
+              <img src="./assets/icons/linkedin1.svg" class="footer-icon" alt="LinkedIn" />
+              <span class="contact-label">LinkedIn</span>
+            </a>
+            <a class="contact-card" target="_blank" href="https://github.com/daniellopesalmeida">
+              <img src="./assets/icons/github1.svg" class="footer-icon" alt="GitHub" />
+              <span class="contact-label">GitHub</span>
+            </a>
+            <a class="contact-card" href="mailto:dani.almeida.dla@gmail.com">
+              <img src="./assets/icons/mail1.svg" class="footer-icon" alt="Email" />
+              <span class="contact-label">Email</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="back-to-top-section">
+        <a class="button back-to-top-button" href="#portfolio-header">
+          <img src="./assets/icons/return-back-svgrepo-com.svg" class="right-arrow-icon back-to-top-icon" alt="Back to top" />
+          <span class="button-text">Back to Top</span>
+        </a>
+      </div>
+
+      <div id="page-end-spacer" aria-hidden="true"></div>
+    </div>
+
+	</body>
+</html>

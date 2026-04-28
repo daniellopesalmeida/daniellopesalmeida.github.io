@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title>itch.io placeholder icon</title>
+  <rect x="8" y="14" width="48" height="36" rx="8" fill="#FA5C5C"/>
+  <path d="M18 26c2.8 0 4-2.2 4-5 0 2.8 1.2 5 4 5 2.8 0 4-2.2 4-5 0 2.8 1.2 5 4 5s4-2.2 4-5c0 2.8 1.2 5 4 5s4-2.2 4-5c0 2.8 1.2 5 4 5v12c0 5.5-4.5 10-10 10H28c-5.5 0-10-4.5-10-10V26Z" fill="#FFFFFF"/>
+  <circle cx="26" cy="34" r="3" fill="#FA5C5C"/>
+  <circle cx="38" cy="34" r="3" fill="#FA5C5C"/>
+</svg>

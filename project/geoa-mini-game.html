@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+    <link rel="icon" href="../assets/icons/avatar.svg" />
+		<title>GEOA Mini Game | Daniel Almeida</title>
+    <meta name="description" content="GEOA Mini Game project page" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/typography.css">
+    <link rel="stylesheet" href="../css/utilities.css">
+
+		<script defer src="../js/script.js"></script>
+	</head>
+	<body>
+    <div class="site-header">
+      <div class="nav-title">Daniel Almeida</div>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    </div>
+
+    <div class="navbar" id="site-nav">
+      <div class="nav-primary">
+        <div class="nav-index">
+          <a class="button" href="#project-details">Overview</a>
+          <a class="button" href="#project-code">Code & Math</a>
+          <a class="button" href="#project-gallery">Gallery</a>
+          <a class="button" href="#project-links">Links</a>
+          <a class="button nav-return-button" href="../index.html">Return Home</a>
+        </div>
+      </div>
+    </div>
+
+    <div id="main-content">
+      <div id="project-header" data-tags="C++, Geometric Algebra, Reflection">
+        <div class="project-page-title">GEOA Mini Game</div>
+        <div class="project-hero-card">
+          <div class="project-tags"></div>
+          <img class="project-header-image" src="../assets/images/geoa.png" alt="GEOA Mini Game hero image" />
+        </div>
+      </div>
+
+      <div id="project-details">
+        <div class="subheader-text">Overview</div>
+        <div class="project-details-content">
+          <div class="project-summary-card">
+            <div class="body-text">This mini game was created to showcase the use of projective geometric algebra learned during the semester in the course of Geometric Algebra. It allowed me to apply the theories directly to gameplay behavior in a custom C++ 2D engine and using FlyFish a custom geometric algebra library.</div>
+          </div>
+          <div class="body-text">This project demonstrates the practical application of projective geometric algebra (PGA) in the game, aiming to replace the traditional vector-based approaches with a diferent mathematical framework.</div>
+          <div class="body-text">The mini game, although simple, showcases the power of PGA. By simply setting the player and enemy positions as a 3-Blade (a point) and the screen boundaries as four 1-Blade (a plane) we can use rotators, and motors to implement movement and rotation on the characters. For colisions i simply compare the distances between the points, and when below a threshold, a collision is detected. In the case of collisions to a wall, we simply use reflection of the motor 3-Blade onto the border 1-Blade, making the object appear to bounce of the wall making it a more simple implementation than traditional vector based movement.</div>
+        </div>
+      </div>
+
+      <div id="project-code">
+        <div class="subheader-text">Code & Math</div>
+        <div class="project-code-content">
+          <div class="formula-card">
+            <div class="formula-title">Translation Motor</div>
+            <div class="formula-expression">
+              <span class="formula-line">
+                <span class="formula-var">d</span>
+                <span class="formula-op">=</span>
+                <span class="formula-frac">
+                  <span class="formula-frac-top">-t</span>
+                  <span class="formula-frac-bottom">2||l||</span>
+                </span>
+              </span>
+              <span class="formula-line">
+                <span class="formula-var">T</span>
+                <span class="formula-op">=</span>
+                <span>1 + d(e<sub>01</sub>, e<sub>02</sub>, e<sub>03</sub>)</span>
+              </span>
+            </div>
+          </div>
+
+          <div class="code-block-card">
+<pre><code class="language-cpp"><span class="code-keyword">static</span> <span class="code-type">Motor</span> <span class="code-function">Translation</span>(<span class="code-type">float</span> <span class="code-identifier">translation</span>, <span class="code-keyword">const</span> <span class="code-type">TwoBlade</span> <span class="code-identifier">line</span>)
+{
+    <span class="code-type">float</span> <span class="code-identifier">d</span>{ -<span class="code-identifier">translation</span> / (<span class="code-number">2</span> * <span class="code-identifier">line</span>.<span class="code-function">VNorm</span>()) };
+    <span class="code-keyword">return</span> <span class="code-type">Motor</span>{
+        <span class="code-number">1</span>,
+        <span class="code-identifier">d</span> * <span class="code-identifier">line</span>[<span class="code-number">0</span>],
+        <span class="code-identifier">d</span> * <span class="code-identifier">line</span>[<span class="code-number">1</span>],
+        <span class="code-identifier">d</span> * <span class="code-identifier">line</span>[<span class="code-number">2</span>],
+        <span class="code-number">0</span>, <span class="code-number">0</span>, <span class="code-number">0</span>, <span class="code-number">0</span>
+    };
+}</code></pre>
+          </div>
+
+          <div class="formula-card">
+            <div class="formula-title">Moving A Point</div>
+            <div class="formula-expression">
+              <span class="formula-line">
+                <span class="formula-var">p'</span>
+                <span class="formula-op">=</span>
+                <span class="formula-var">T</span>
+                <span class="formula-var">p</span>
+                <span class="formula-var">T&#771;</span>
+              </span>
+            </div>
+          </div>
+
+          <div class="code-block-card">
+<pre><code class="language-cpp"><span class="code-type">Motor</span> <span class="code-identifier">translationMotor</span> = <span class="code-type">Motor</span>::<span class="code-function">Translation</span>(<span class="code-identifier">m_TranslationSpeed</span>, <span class="code-identifier">m_ReflectionLine</span>);
+<span class="code-type">MultiVector</span> <span class="code-identifier">TRPoint</span> = <span class="code-identifier">translationMotor</span> * <span class="code-identifier">m_Position</span> * ~<span class="code-identifier">translationMotor</span>;
+<span class="code-identifier">m_Position</span> = <span class="code-identifier">TRPoint</span>.<span class="code-function">Grade3</span>();</code></pre>
+          </div>
+
+          <div class="formula-card">
+            <div class="formula-title">Reflection Across A Boundary</div>
+            <div class="formula-expression">
+              <span class="formula-line">
+                <span class="formula-var">l'</span>
+                <span class="formula-op">=</span>
+                <span class="formula-var">b</span>
+                <span class="formula-var">l</span>
+                <span class="formula-var">b&#771;</span>
+              </span>
+            </div>
+          </div>
+
+          <div class="code-block-card">
+<pre><code class="language-cpp"><span class="code-keyword">if</span> ((<span class="code-identifier">m_Position</span> &amp; <span class="code-identifier">screen</span>.<span class="code-identifier">width</span>) &lt;= <span class="code-number">2</span> + <span class="code-identifier">m_Size</span>)
+{
+    <span class="code-identifier">m_ReflectionLine</span> =
+        (<span class="code-identifier">screen</span>.<span class="code-identifier">width</span> * <span class="code-identifier">m_ReflectionLine</span> * ~<span class="code-identifier">screen</span>.<span class="code-identifier">width</span>).<span class="code-function">Grade2</span>();
+}</code></pre>
+          </div>
+
+        </div>
+      </div>
+
+      <div id="project-gallery">
+        <div class="subheader-text">Gallery</div>
+        <div class="project-gallery-content">
+          <div class="gallery-image-container half-width">
+            <img src="../assets/images/geoaExample.gif" class="gallery-image" alt="GEOA gameplay example">
+          </div>
+        </div>
+      </div>
+
+      <div id="project-links">
+        <div class="subheader-text">Links</div>
+        <div class="project-links-grid">
+          <a class="project-link-card" target="_blank" href="https://github.com/daniellopesalmeida/GEOA-MiniGame">
+            <img src="../assets/icons/github1.svg" class="footer-icon" alt="GitHub" />
+            <span class="project-link-label">Repository</span>
+          </a>
+          <a class="project-link-card back-projects-link" href="../index.html#other-projects-section">
+            <img src="../assets/icons/return-back-svgrepo-com.svg" class="footer-icon" alt="Back to projects" />
+            <span class="project-link-label">Back to Projects</span>
+          </a>
+        </div>
+      </div>
+    </div>
+	</body>
+</html>
