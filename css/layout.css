@@ -641,14 +641,6 @@ body {
   font-weight: 700;
 }
 
-    /* Project Videos */
-
-    #project-videos {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
-
     /* Project Gallery */
 
     #project-gallery {
@@ -658,13 +650,6 @@ body {
     }
 
     .project-gallery-content {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 16px;
-      align-items: stretch;
-    }
-
-    .project-videos-content {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 16px;
@@ -784,10 +769,6 @@ body {
   }
 
   .project-gallery-content {
-    grid-template-columns: 1fr;
-  }
-
-  .project-videos-content {
     grid-template-columns: 1fr;
   }
 
