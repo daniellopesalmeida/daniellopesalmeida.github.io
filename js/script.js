@@ -1,7 +1,3 @@
-
-// Example: smooth scroll for anchor links (already handled by CSS scroll-behavior)
-// You can add things like: lightbox for gallery images, scroll animations, etc.
-
 const defaultProjectTags = ["Unity", "Unreal", "C#", "C++"];
 
 function getTagsFromDataset(tagString) {
@@ -185,7 +181,6 @@ function setupNavToggle() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  console.log('Portfolio loaded!');
   setupProjectTags();
   setupProjectPageTags();
   setupSectionNavigation();

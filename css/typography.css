@@ -13,11 +13,6 @@ body {
   font-weight: 700;
 }
 
-.image-caption {
-  font-size: 14px;
-  font-weight: 500;
-}
-
 .main-title {
   font-size: 40px;
   font-weight: 700;
@@ -43,7 +38,7 @@ body {
 .hero-name {
   display: inline-block;
   color: var(--primary-color);
-  background: linear-gradient(90deg, #fff7ec 0%, #ffd7a1 35%, var(--primary-color) 68%, var(--accent-color) 100%);
+  background: linear-gradient(90deg, var(--primary-color), #ffd7a1 45%, var(--accent-color));
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -75,7 +70,6 @@ body {
 #project-details > .subheader-text::after,
 #project-preface > .subheader-text::after,
 #project-code > .subheader-text::after,
-#project-videos > .subheader-text::after,
 #project-gallery > .subheader-text::after,
 #project-links > .subheader-text::after,
 .project-page-title::after {
