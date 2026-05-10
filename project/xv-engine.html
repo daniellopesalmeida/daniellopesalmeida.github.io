@@ -35,21 +35,28 @@
         <div class="project-page-title">XVEngine</div>
         <div class="project-hero-card">
           <div class="project-tags"></div>
-          <img class="project-header-image" src="../assets/images/XVEngine/triangleVulkan.png" alt="XVEngine Vulkan graphics hero image" />
+          <img class="project-header-image" src="../assets/images/XVEngine/vehicle1.png" alt="XVEngine Vulkan graphics hero image" />
         </div>
       </div>
 
       <div id="project-details">
         <div class="subheader-text">Overview</div>
         <div class="project-details-content">
-          <div class="body-text">A real-time Vulkan 1.4 engine built from scratch in C++20, featuring dynamic rendering, modern synchronization, and RAII based  across a fully custom rendering pipeline. An ongoing project covering everything from physical device selection and swapchain management to shader compilation and per-frame GPU synchronization. Built to better understand how modern graphics APIs actually work.</div>
-          <div class="body-text">Currently in early stages, with a triangle rendered on screen and basic resource management implemented. Future plans include implementing a deferred renderer, physically based rendering, and a custom scene graph.</div>
+          <div class="body-text">A real-time Vulkan 1.4 engine built from scratch in C++20. A on going project to learn more about modern graphics programming, and game engine architecture.</div>
+          <div class="body-text">Currently in early stages, i am using an incremental development aproach, where i try to implement a new feature at a time. This project started after completing Krhonos vulkan tutorial and i started to think about abstraction, and a more modular aproach to a engine.</div>
+          <div class="body-text">The last update included the implementation of a pipeline selection based on material properties, in order to be able to render masked textures and additive. The next steps are going to be shadow maps, pbr materials and SSBO.</div>
         </div>
       </div>
 
       <div id="project-gallery">
         <div class="subheader-text">Gallery</div>
         <div class="project-gallery-content">
+          <div class="gallery-image-container half-width">
+            <img src="../assets/images/XVEngine/engineVehicleGif1.gif" class="gallery-image" alt="XV Engine Vulkan rendering">
+          </div>
+          <div class="gallery-image-container half-width">
+            <img src="../assets/images/XVEngine/engineCubeGif1.gif" class="gallery-image" alt="XV Engine Vulkan rendering">
+          </div>
           <div class="gallery-image-container half-width">
             <img src="../assets/images/XVEngine/triangleVulkan.png" class="gallery-image" alt="XV Engine Vulkan rendering">
           </div>
