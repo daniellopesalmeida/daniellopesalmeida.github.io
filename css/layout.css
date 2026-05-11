@@ -193,14 +193,15 @@ body {
   position: relative;
   z-index: 1;
   display: flex;
-  gap: 12px;
+  gap: 16px;
   justify-content: center;
   margin-top: 72px;
 }
 
 .hero-contact-link {
-  width: 32px;
-  height: 32px;
+  position: relative;
+  width: 44px;
+  height: 44px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -212,8 +213,8 @@ body {
 }
 
 .hero-contact-icon {
-  width: 24px;
-  height: 24px;
+  width: 34px;
+  height: 34px;
   display: block;
   transition: transform 200ms ease-in-out, filter 200ms ease-in-out;
 }
@@ -221,6 +222,32 @@ body {
 .hero-contact-link:hover .hero-contact-icon {
   transform: rotate(15deg) scale(1.08);
   filter: drop-shadow(0 0 8px var(--accent-color));
+}
+
+.hero-contact-link::after {
+  position: absolute;
+  left: 50%;
+  top: calc(100% + 8px);
+  padding: 6px 9px;
+  border-radius: 6px;
+  background: var(--white-color);
+  color: var(--black-color);
+  content: attr(aria-label);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1;
+  opacity: 0;
+  pointer-events: none;
+  transform: translate(-50%, -4px);
+  transition: opacity 160ms ease-in-out, transform 160ms ease-in-out;
+  white-space: nowrap;
+  z-index: 10;
+}
+
+.hero-contact-link:hover::after,
+.hero-contact-link:focus-visible::after {
+  opacity: 1;
+  transform: translate(-50%, 0);
 }
 
 #portfolio-header .header-text {
@@ -937,4 +964,3 @@ body {
     min-height: 96px;
   }
 }
-
